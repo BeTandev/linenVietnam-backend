@@ -1,0 +1,12 @@
+POST http://localhost:5000/api/v1/auth/register/
+Content-type: application/json
+
+{
+    "email" : "sfdsfdsd",
+    "password": "4444444"
+}
+
+
+###
+GET http://localhost:5000/api/v1/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJiZXRhbkBnbWFpbC5jb20iLCJyb2xlX2NvZGUiOiJSMyIsIm5hbWUiOm51bGwsImlhdCI6MTcxMDMyMjM4MywiZXhwIjoxNzEwNzU0MzgzfQ.WGV8xIHxh6B4Ywvcfx2uIopHhITy5tdYqiTS01NypIU
