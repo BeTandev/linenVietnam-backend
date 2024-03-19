@@ -17,8 +17,8 @@ module.exports = {
       amountProduct: {type:Sequelize.INTEGER},
       weightProduct: {type:Sequelize.FLOAT},
       widthProduct: {type:Sequelize.FLOAT},
-      avatarProduct: {type:Sequelize.STRING},
-      detailImgProduct: {type:Sequelize.STRING},
+      image: {type:Sequelize.STRING},
+      filename: {type: Sequelize.STRING},
       createdAt: {
         allowNull: false,
         type: 'TIMESTAMP',

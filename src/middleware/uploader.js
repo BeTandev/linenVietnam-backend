@@ -12,8 +12,8 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
   cloudinary,
   allowedFormats: ['jpg', 'png'],
-  params:{
-    folder: 'linenVietnam'
+  params: {
+    folder: 'learnNodejs'
   }
 });
 

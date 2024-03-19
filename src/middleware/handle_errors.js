@@ -1,4 +1,4 @@
-import createError from 'http-errors'
+import * as createError from 'http-errors';
 export const badRequest = (err, res) => {
     const error = createError.BadRequest(err)
     return res.status(error.status).json({

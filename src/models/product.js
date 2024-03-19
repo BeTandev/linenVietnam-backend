@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      // Product.belongsTo(models.Category, {foreignKey: 'category_code', targetKey: 'code', as: 'Category_data'})
     }
   }
   Product.init({
@@ -23,8 +24,8 @@ module.exports = (sequelize, DataTypes) => {
     amountProduct: DataTypes.INTEGER,
     weightProduct: DataTypes.FLOAT,
     widthProduct: DataTypes.FLOAT,
-    avatarProduct: DataTypes.STRING,
-    detailImgProduct: DataTypes.STRING
+    image: DataTypes.STRING,
+    filename: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Product',

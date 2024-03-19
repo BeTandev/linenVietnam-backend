@@ -1,12 +1,30 @@
-POST http://localhost:5000/api/v1/auth/register/
+POST http://localhost:5000/api/v1/auth/login/
 Content-type: application/json
 
 {
-    "email" : "sfdsfdsd",
-    "password": "4444444"
+    "email" : "sadasd@gmail.com",
+    "password": "qwerty"
 }
 
 
 ###
 GET http://localhost:5000/api/v1/user/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJiZXRhbkBnbWFpbC5jb20iLCJyb2xlX2NvZGUiOiJSMyIsIm5hbWUiOm51bGwsImlhdCI6MTcxMDMyMjM4MywiZXhwIjoxNzEwNzU0MzgzfQ.WGV8xIHxh6B4Ywvcfx2uIopHhITy5tdYqiTS01NypIU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYWRhc2RAZ21haWwuY29tIiwicm9sZV9jb2RlIjoiUjEiLCJuYW1lIjpudWxsLCJpYXQiOjE3MTA0NzMzNjYsImV4cCI6MTcxMDkwNTM2Nn0.Ey362vjAFspKxp5EbbWYV7PUbYLFHKPzjdFlPcTOocw
+
+
+###
+GET http://localhost:5000/api/v1/book/
+
+###
+POST http://localhost:5000/api/v1/book/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzYWRhc2RAZ21haWwuY29tIiwicm9sZV9jb2RlIjoiUjEiLCJuYW1lIjpudWxsLCJpYXQiOjE3MTA0NzgyNTgsImV4cCI6MTcxMDkxMDI1OH0.-nGz0qMQV1KHeMgeJyRHrGP9v2tXatImXeX-STctjJQ
+Content-Type: application/json
+
+{
+    "title": "Harry",
+    "page": 200,
+    "year": 1956,
+    "image": "asdasdsadsda",
+    "language": "English",
+    "category_code": "Fair"
+}

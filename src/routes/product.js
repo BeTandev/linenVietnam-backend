@@ -6,11 +6,13 @@ import uploadCloud from '../middleware/uploader'
 
 const router = express.Router()
 
-// router.get('/', controllers.createNewProduct)
+router.get('/', controllers.getProducts)
 
 // router.use(verifyToken)
 // router.use(isAdmin)
-// router.post('/', uploadCloud.single('image'), controllers.createNewBook)
 router.post('/', uploadCloud.single('image'), controllers.createNewProduct)
+router.put('/', uploadCloud.single('image'), controllers.updateProduct)
+router.delete('/', controllers.deleteProduct)
+// router.post('/', controllers.createNewBook)
 
 module.exports = router
