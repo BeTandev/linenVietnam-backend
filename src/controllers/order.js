@@ -1,6 +1,6 @@
 import * as services from '../services'
 import { badRequest, internalServerError } from '../middleware/handle_errors'
-import { nameproductorder, nameuserOrder, addressorder, phonenumberOrder, totalOrder, bids, bid } from '../helper/joi_schema'
+import { nameProductOrder, nameUserOrder, addressOrder, phoneNumberOrder, amountOrder, totalOrder, companyNameOrder, emailOrder, noteOrder, shippingMethodOrder, bids, bid } from '../helper/joi_schema'
 import joi from 'joi'
 
 // GET
@@ -16,7 +16,7 @@ export const getOrders = async(req, res) => {
 // CREATE
 export const createNewOrder = async(req, res) => {
     try {
-        const {error} = joi.object({nameproductorder, nameuserOrder, addressorder, phonenumberOrder, totalOrder}).validate({...req.body})
+        const {error} = joi.object({nameProductOrder, nameUserOrder, addressOrder, phoneNumberOrder, amountOrder, totalOrder, companyNameOrder, emailOrder, noteOrder, shippingMethodOrder}).validate({...req.body})
         if(error){
             return badRequest(error.details[0].message, res)
         } 

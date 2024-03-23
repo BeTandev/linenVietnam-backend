@@ -36,7 +36,7 @@ export const getOrders = ({page, limit, order, name, ...query}) => new Promise(a
 export const createNewOrder = (body) => new Promise(async (resolve, reject) => {
     try{
         const response = await db.Order.findOrCreate({
-            where: {nameproductorder: body?.nameproductorder},
+            where: {nameProductOrder: body?.nameProductOrder},
             defaults: {
                 ...body,
                 id: generated()

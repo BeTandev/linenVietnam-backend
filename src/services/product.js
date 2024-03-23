@@ -25,8 +25,8 @@ export const getProducts = ({page, limit, order, name, ...query}) => new Promise
         })
         resolve({
             err: response ? 0 : 1,
-            mes: response ? "Got" : "Cannot find book",
-            bookData: response
+            mes: response ? "Got" : "Cannot find product",
+            productData: response
         })
     } catch(err){
         reject(err)
