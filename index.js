@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import initRoutes from './src/routes'
+import { generateCode } from './src/helper/fn'
 require('dotenv').config()
 require('./connection_databse')
 

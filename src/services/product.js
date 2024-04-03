@@ -4,7 +4,7 @@ const cloudinary = require('cloudinary').v2;
 import {v4 as generated} from 'uuid'
 
 // READ
-export const getProducts = ({page, limit, order, name, ...query}) => new Promise(async (resolve, reject) => {
+export const getProducts = ({page, limit, order, name, category, ...query}) => new Promise(async (resolve, reject) => {
     try{
         const queries = {raw: true, nest: true}
         const offset = (!page || +page <= 1) ? 0 : (+page - 1)
@@ -13,6 +13,7 @@ export const getProducts = ({page, limit, order, name, ...query}) => new Promise
         queries.limit = fLimit
         if(order) queries.order = [order]
         if(name) query.title = {[Op.substring]: name}
+        if(category) query.categoryProduct = {[Op.substring]: category.split("%20").join(" ")}
         const response = await db.Product.findAndCountAll({
             where: query,
             ...queries

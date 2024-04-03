@@ -27,7 +27,7 @@ export const getOrders = ({ page, limit, order, name, ...query }) =>
       resolve({
         err: response ? 0 : 1,
         mes: response ? "Got" : "Cannot find order",
-        bookData: response,
+        orderData: response,
       });
     } catch (err) {
       reject(err);

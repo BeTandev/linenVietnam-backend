@@ -41,7 +41,7 @@ export const login = ({email, password}) => new Promise( async (resolve, reject)
         })
 
         const isChecked = response && bcrypt.compareSync(password, response.password)
-        const token = isChecked ? jwt.sign({id: response.id, email: response.email, role_code: response.role_code, name: response.name}, process.env.JWT_SECRET, { expiresIn: '5d' }) : null
+        const token = isChecked ? jwt.sign({id: response.id, email: response.email, role_code: response.role_code, name: response.name}, process.env.JWT_SECRET, { expiresIn: '1d' }) : null
       
         // const token = response[1] ? jwt.sign({id: response[0].id, email: response[0].email, role_code: response[0].role_code, name: response[0].name}, process.env.JWT_SECRET, { expiresIn: '5d' }) : null
 
